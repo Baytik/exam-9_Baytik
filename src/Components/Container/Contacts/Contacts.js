@@ -11,7 +11,6 @@ class Contacts extends Component {
     };
 
     async componentDidMount() {
-        const id = this.props.match.params;
         await this.props.getContacts();
     }
 

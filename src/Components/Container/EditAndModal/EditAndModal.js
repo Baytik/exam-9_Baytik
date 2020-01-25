@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {contactsDelete, editContacts, getContacts} from "../../../store/actions/contactsAction";
 import {connect} from "react-redux";
+import './EditAndModal.css';
 
 class EditAndModal extends Component {
 
@@ -45,8 +46,8 @@ class EditAndModal extends Component {
 
     render() {
         return (
-            <div className="Contacts-Modal">
-                <h2>Add new contact</h2>
+            <div className="Contacts-Edit">
+                <h2>Edit your profile</h2>
                 <div className="input-block">
                     <div>
                         <span>Name</span>

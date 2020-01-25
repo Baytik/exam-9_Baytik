@@ -47,3 +47,8 @@
     color: black;
     padding: 5px 10px;
 }
+.preview-img {
+    margin-top: 30px;
+    margin-left: 15%;
+    width: 80px;
+}

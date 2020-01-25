@@ -48,6 +48,7 @@ class NewContact extends Component {
                     </div>
                     <div>
                         <span>Photo preview</span>
+                        <img src={this.state.photo} className="preview-img"/>
                     </div>
                     <div className="footer-contact">
                         <button onClick={this.newContact}>Save</button>
