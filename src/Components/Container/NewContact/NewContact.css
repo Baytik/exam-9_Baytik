@@ -1,0 +1,49 @@
+.new-contact-block h2 {
+    margin-left: 70px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.input-block {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: orange;
+}
+.input-block div {
+    margin: 10px 0;
+}
+.input-block input {
+    font-size: 20px;
+    padding: 3px 5px;
+    border: 2px solid black;
+}
+.input-block span {
+    font-size: 20px;
+}
+.input-1 {
+    margin-left: 200px;
+}
+.input-2 {
+    margin-left: 195px;
+}
+.input-3 {
+    margin-left: 204px;
+}
+.input-4 {
+    margin-left: 199px;
+}
+.input-block button {
+    margin-top: 30px;
+    margin-right: 25%;
+    border: 2px solid gold;
+    background: yellow;
+    cursor: pointer;
+    font-size: 25px;
+}
+.input-block a {
+    font-size: 24px;
+    border: 2px solid black;
+    background: yellow;
+    color: black;
+    padding: 5px 10px;
+}
