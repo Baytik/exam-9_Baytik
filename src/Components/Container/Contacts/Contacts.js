@@ -1,33 +1,35 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './Contacts.css';
 import {getContacts} from "../../../store/actions/contactsAction";
 import {connect} from "react-redux";
+import {NavLink} from "react-router-dom";
 
 class Contacts extends Component {
 
+    state = {
+        modalShow: false,
+    };
+
     async componentDidMount() {
+        const id = this.props.match.params;
         await this.props.getContacts();
     }
 
-    modalClick = () => {
-      return (
-          <div>
-              Hello
-          </div>
-      )
-    };
-
     render() {
-        console.log(this.props.contacts);
         return (
+            <Fragment>
             <div className="Contacts">
-                {Object.keys(this.props.contacts).map(contact => (
+                {this.props.contacts &&
+                    Object.keys(this.props.contacts).map(contact => (
                     <div className="contacts-block" key={contact}>
-                        <img src={this.props.contacts[contact].photo} alt=""/>
-                        <span onClick={this.modalClick}>{this.props.contacts[contact].name}</span>
+                        <img src={this.props.contacts[contact].photo} alt="images"/>
+                        <NavLink to={`/contacts/modal${contact}`}>
+                        <span>{this.props.contacts[contact].name}</span>
+                        </NavLink>
                     </div>
                 ))}
             </div>
+            </Fragment>
         );
     }
 }

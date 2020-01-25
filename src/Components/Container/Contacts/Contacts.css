@@ -15,9 +15,9 @@
     width: 100px;
     height: 100px;
 }
-.contacts-block span {
-    cursor: pointer;
-    padding-top: 40px;
+.contacts-block a {
+    padding-top: 35px;
     padding-left: 30px;
-    text-transform: uppercase;
+    color: black;
+    font-size: 22px;
 }

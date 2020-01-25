@@ -16,3 +16,27 @@ export const getContacts = () => {
         }
     }
 };
+
+export const editContacts = (id, contact) => {
+    return async dispatch => {
+        try {
+            dispatch(contactsRequest());
+            await axiosAPI.put(`${id}.json`, contact);
+            dispatch(contactsSuccess())
+        }catch (e) {
+            dispatch(contactsFailure(e))
+        }
+    }
+};
+
+export const contactsDelete = (id) => {
+    return  async dispatch => {
+        try {
+            dispatch(contactsRequest());
+            await axiosAPI.delete(`${id}.json`);
+            dispatch(getContacts())
+        }catch (e) {
+            dispatch(contactsFailure(e))
+        }
+    }
+};
